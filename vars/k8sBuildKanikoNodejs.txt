@@ -1,0 +1,13 @@
+## Runs image build
+
+Builds a docker image and uploads to image repo
+
+**Arguments:**
+
+* **image**: the image repo and name
+
+* **git_commit**: the commit you are building
+
+**Requirements:**
+
+* A node with Kaniko

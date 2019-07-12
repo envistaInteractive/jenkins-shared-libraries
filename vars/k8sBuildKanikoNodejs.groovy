@@ -1,5 +1,5 @@
-def call(image, git_commit) {
+def call(image) {
     sh '''#!/busybox/sh
-    /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --cache=true --destination=${image}:${git_commit}
+    /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --cache=true --destination=${image}
     '''
 }

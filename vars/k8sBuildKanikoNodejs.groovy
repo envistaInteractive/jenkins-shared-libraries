@@ -1,7 +1,6 @@
 def call(image) {
-    def image_tagged = "${image}:${env.BUILD_NUMBER}-${env.GIT_COMMIT}"
     sh '''#!/busybox/sh
-    /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --cache=true --destination=${image_tagged}
+    /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --cache=true --destination=${image}:${env.BUILD_NUMBER}-${env.GIT_COMMIT}
     '''
 }
 

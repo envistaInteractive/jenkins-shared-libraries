@@ -11,5 +11,3 @@ def call(image) {
 //     /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --cache=true --destination=${image}
 //     '''
 // }
-
-`

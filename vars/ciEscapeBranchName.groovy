@@ -1,5 +1,5 @@
 def call() {
-    def escapedBranch = env.BRANCH_NAME
+    def escapedBranch = env.GIT_BRANCH
             .toString()
             .toLowerCase()
             .replace("/", "-")
@@ -7,5 +7,7 @@ def call() {
             // (e.g. 'my-name',  or 'abc-123', regex used for validation is '[a-z]([-a-z0-9]*[a-z0-9])?')
             .replace(".", "-")
 
+    echo "escapedBranch is $escapedBranch"
+    
     return escapedBranch
 }

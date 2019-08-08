@@ -1,6 +1,6 @@
 def call() {
     escapedBranch = ciEscapeBranchName()
-
+    echo "escapedBranch is $escapedBranch"
     tag = ""
     if(escapedBranch == 'master') {
         echo "##### master branch detected"

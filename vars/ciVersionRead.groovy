@@ -1,5 +1,5 @@
 def call() {
-    escapedBranch = ciEscapeBranchName()
+    env.escapedBranch = ciEscapeBranchName()
     echo "escapedBranch is $escapedBranch"
     tag = ""
     if(escapedBranch == 'master') {

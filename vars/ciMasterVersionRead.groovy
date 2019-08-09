@@ -1,6 +1,6 @@
 def call() {
     sh "git config --global tag.sort version:refname"
-    sh "git fetch origin 'refs/tags/*:refs/tags/*'"
+    //sh "git fetch origin 'refs/tags/*:refs/tags/*'"
 
     def version = sh(script: 'git tag -l | tail -n1', returnStdout: true).trim() ?: 'v1.0.0'
 
